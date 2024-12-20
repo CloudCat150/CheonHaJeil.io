@@ -25,7 +25,7 @@ public class Skill2 : MonoBehaviour
     {
         // 오브젝트 활성화
         targetObject.SetActive(true);
-        yield return new WaitForSeconds(2f); // 2초 대기
+        yield return new WaitForSeconds(0.1f); // 2초 대기
         targetObject.SetActive(false);      // 오브젝트 비활성화
     }
 }
