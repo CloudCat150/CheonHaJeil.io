@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class Skill2 : MonoBehaviour
 {
-    public GameObject targetObject; // È°¼ºÈ­/ºñÈ°¼ºÈ­ÇÒ ´Ù¸¥ ¿ÀºêÁ§Æ®
+    public GameObject targetObject; // È°ï¿½ï¿½È­/ï¿½ï¿½È°ï¿½ï¿½È­ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 
     void Update()
     {
-        // ¿ìÅ¬¸¯ °¨Áö
-        if (Input.GetMouseButtonDown(1)) // 1: ¿ìÅ¬¸¯
+        // ï¿½ï¿½Å¬ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        if (Input.GetMouseButtonDown(1)) // 1: ï¿½ï¿½Å¬ï¿½ï¿½
         {
             if (targetObject != null)
             {
@@ -23,9 +23,9 @@ public class Skill2 : MonoBehaviour
 
     IEnumerator ActivateAndDeactivate()
     {
-        // ¿ÀºêÁ§Æ® È°¼ºÈ­
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® È°ï¿½ï¿½È­
         targetObject.SetActive(true);
-        yield return new WaitForSeconds(2f); // 2ÃÊ ´ë±â
-        targetObject.SetActive(false);      // ¿ÀºêÁ§Æ® ºñÈ°¼ºÈ­
+        yield return new WaitForSeconds(0.2f); // 2ï¿½ï¿½ ï¿½ï¿½ï¿½
+        targetObject.SetActive(false);      // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½È°ï¿½ï¿½È­
     }
 }

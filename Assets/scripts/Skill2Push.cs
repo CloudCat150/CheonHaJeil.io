@@ -2,23 +2,23 @@ using UnityEngine;
 
 public class Skill2Push : MonoBehaviour
 {
-    public GameObject Player; // Player ¿ÀºêÁ§Æ®
-    public float pushForce = 5f; // ¹Ð¾î³»´Â Èû
+    public GameObject Player; // Player ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    public float pushForce = 5f; // ï¿½Ð¾î³»ï¿½ï¿½ ï¿½ï¿½
 
     private void Start()
     {
-        // ½ºÅ©¸³Æ®°¡ ½ÃÀÛµÇ¾úÀ» ¶§ ¸Þ½ÃÁö¸¦ Ãâ·ÂÇÏ¿© ½ºÅ©¸³Æ®°¡ È°¼ºÈ­µÇ¾ú´ÂÁö È®ÀÎ
-        Debug.Log("PushObject ½ºÅ©¸³Æ® ½ÃÀÛ");
+        // ï¿½ï¿½Å©ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ÛµÇ¾ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½Å©ï¿½ï¿½Æ®ï¿½ï¿½ È°ï¿½ï¿½È­ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
+        Debug.Log("PushObject ï¿½ï¿½Å©ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½");
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Ãæµ¹ÇÑ ¿ÀºêÁ§Æ®ÀÇ ÀÌ¸§À» Ãâ·Â
-        Debug.Log($"Ãæµ¹ÇÑ ¿ÀºêÁ§Æ®: {collision.gameObject.name}");
+        // ï¿½æµ¹ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+        Debug.Log($"ï¿½æµ¹ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®: {collision.gameObject.name}");
 
         if (collision.gameObject.CompareTag("Ob"))
         {
-            Debug.Log("Ob ÅÂ±×¿Í Ãæµ¹ ¹ß»ý!");
+            Debug.Log("Ob ï¿½Â±×¿ï¿½ ï¿½æµ¹ ï¿½ß»ï¿½!");
 
             Vector3 playerPosition = Player.transform.position;
             Vector3 obPosition = collision.gameObject.transform.position;
@@ -29,7 +29,7 @@ public class Skill2Push : MonoBehaviour
             if (obRigidbody != null)
             {
                 obRigidbody.AddForce(pushDirection * pushForce, ForceMode2D.Impulse);
-                Debug.Log("Ob ¿ÀºêÁ§Æ® ¹Ð¸²");
+                Debug.Log("Ob ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ð¸ï¿½");
             }
         }
     }
